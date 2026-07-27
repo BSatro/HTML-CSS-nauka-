@@ -100,7 +100,7 @@
         <dd>z ang. <b>p</b>aragraph - czyli akapit</dd> <!-- definition description (opis) -->
 
         <dt>&lt;br></dt>
-        <dd>z ang. <b>b</b>reak - służy do użycia klawisza "Enter" na stronie</dd>
+        <dd>z ang. <b>br</b>eak - służy do użycia klawisza "Enter" na stronie</dd>
         
         <dt>&lt;body></dt>
         <dd>Określa ciało strony. Zamieszczamy w nim jej treść</dd>
@@ -206,8 +206,8 @@
     <p>
         <dfn><abbr title="Hypertext Markup Language">HTML</abbr></dfn> to język znaczników do tworzenia stron WWW.
     </p>
-
-
+    
+    
 
     <br><br><br><br><br>
 
@@ -235,7 +235,7 @@
     </p>
 
     <p>
-        CSS jest odpowiedzialny za <strong>wygląd</strong> Twojej strony internetowej.
+        <mark>CSS</mark> jest odpowiedzialny za <strong>wygląd</strong> Twojej strony internetowej.
     </p>
 
     <p>
@@ -271,31 +271,31 @@
     -->
 <pre>
 <code>
-    #include &lt;iostream>
-    #include &lt;vector>
-    #include &lt;typeinfo>
+    <!-- #include <iostream>
+    #include <vector>
+    #include <typeinfo>
     
     using namespace std;
     
     int main()
     {
     
-        vector&lt;int> wholeNumbers {20, 10, 4, -3, 25};
+        vector<int> wholeNumbers {20, 10, 4, -3, 25};
     
         double nrOfPeople = 20.5;
     
-        cout &lt;&lt; nrOfPeople &lt;&lt; endl;
-        cout &lt;&lt; typeid(nrOfPeople).name() &lt;&lt; endl;
+        cout << nrOfPeople << endl;
+        cout << typeid(nrOfPeople).name() << endl;
     
     
         for(auto it = wholeNumbers.begin(); it != wholeNumbers.end(); it++)
         {
-            cout &lt;&lt; *it &lt;&lt; endl;
+            cout << *it << endl;
         }
     
     
         return 0;
-    }
+    } -->
 </code>
 </pre>
         
@@ -340,6 +340,10 @@
     <form action="ankieta.php" method="post">
         <fieldset>
             <legend>Ile masz lat?</legend>
+            <!-- 
+            name - po przesłaniu serwer wie do jakiego pytania należy odpowiedz
+            value - po przesłaniu serwer wie jaka została wybrana opcja
+            -->
             <input type="radio" name="kategoria_wiekowa" id="kategoria_wiekowa1" value="7-18"><label for="kategoria_wiekowa1">7-18</label>
             <input type="radio" name="kategoria_wiekowa" id="kategoria_wiekowa2" value="19-29"><label for="kategoria_wiekowa2">19-29</label>
             <input type="radio" name="kategoria_wiekowa" id="kategoria_wiekowa3" value="30-39"><label for="kategoria_wiekowa3">30-39</label><br>
@@ -348,9 +352,9 @@
         <fieldset>
             <legend>Jakie jest Twoje hobby?</legend>
 
-            <input type="checkbox" name="hobby" id="plywanie" value="plywanie"><label for="plywanie">pływanie</label>
-            <input type="checkbox" name="hobby" id="programowanie" id="programowanie"><label for="programowanie">programowanie</label>
-            <input type="checkbox" name="hobby" id="gry_komputerowe" id="gry_komputerowe"><label for="gry_komputerowe">gry komputerowe</label>
+            <label><input type="checkbox" name="hobby" id="plywanie" value="plywanie">pływanie</label>   
+            <input type="checkbox" name="hobby" id="programowanie" value="programowanie"><label for="programowanie">programowanie</label>
+            <input type="checkbox" name="hobby" id="gry_komputerowe" value="gry_komputerowe"><label for="gry_komputerowe">gry komputerowe</label>
         </fieldset>      
 
         Ilość jednostek: <input type="text" autocomplete="off" size="3" maxlength="1" placeholder="1-9" value="1" autofocus> szt.
